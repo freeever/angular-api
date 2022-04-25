@@ -10,7 +10,7 @@ export class EmployeeService {
   constructor(private http: HttpClient) {
   }
 
-  private baseUrl: string = 'http://localhost:8080/api/employees/';
+  private baseUrl: string = '/api/employees/';
 
   getEmployees() : Observable<Employee[]> {
     return this.http.get<Employee[]>(this.baseUrl);
